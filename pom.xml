@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>self</groupId>
+	<artifactId>nlp</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<!-- TODO: customize this property -->
+		<ion.mainClass>com.iontrading.tradeInitializerCore.Main</ion.mainClass>
+		<java.target.version>1.8</java.target.version>
+		<ion.business_unit>CAT</ion.business_unit>
+		<ion.area>REPO</ion.area>
+		<art2.gitpath>/orderInitiator</art2.gitpath>
+		<art2.gitmaster>release</art2.gitmaster>
+		<art2.gitdevelop>master</art2.gitdevelop>
+		<art2.enableconfluencedeploy />
+		<xml.skip>true</xml.skip>
+		<apache_opennlp.version>1.8.1</apache_opennlp.version>
+		<stanford_corenlp.version>3.8.0</stanford_corenlp.version>
+		<stanford_nlp_parser.version>3.5.2</stanford_nlp_parser.version>
+	</properties>
+
+	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/com.google.inject/guice -->
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>3.0</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>21.0</version>
+		</dependency>
+
+
+		<!-- Apache Open NLP dependencies -->
+		<dependency>
+			<groupId>org.apache.opennlp</groupId>
+			<artifactId>opennlp-tools</artifactId>
+			<version>${apache_opennlp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.opennlp</groupId>
+			<artifactId>opennlp-uima</artifactId>
+			<version>${apache_opennlp.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.opennlp</groupId>
+			<artifactId>opennlp-morfologik-addon</artifactId>
+			<version>${apache_opennlp.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.opennlp</groupId>
+			<artifactId>opennlp-brat-annotator</artifactId>
+			<version>${apache_opennlp.version}</version>
+		</dependency>
+
+		<!-- Stanford NLP dependencies -->
+		<dependency>
+			<groupId>edu.stanford.nlp</groupId>
+			<artifactId>stanford-corenlp</artifactId>
+			<version>${stanford_corenlp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>edu.stanford.nlp</groupId>
+			<artifactId>stanford-corenlp</artifactId>
+			<version>${stanford_corenlp.version}</version>
+			<classifier>models</classifier>
+		</dependency>
+		<dependency>
+			<groupId>edu.stanford.nlp</groupId>
+			<artifactId>stanford-parser</artifactId>
+			<version>${stanford_nlp_parser.version}</version>
+		</dependency>
+	</dependencies>
+</project>
