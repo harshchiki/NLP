@@ -3,7 +3,6 @@ package com.iontrading.rom.nlp.engine.impl;
 import java.util.Collection;
 import java.util.HashSet;
 
-import com.iontrading.rom.nlp.engine.NLPEngine;
 import com.iontrading.rom.nlp.engine.parsers.impl.SecurityCodeParserImpl;
 import com.iontrading.rom.nlp.engine.parsers.impl.SecurityDescriptionParserImpl;
 import com.iontrading.rom.nlp.engine.processors.NERProcessor;
@@ -13,6 +12,7 @@ import com.iontrading.rom.nlp.engine.processors.impl.NERProcessorImpl;
 import com.iontrading.rom.nlp.engine.processors.impl.SecurityCodeProcessorImpl;
 import com.iontrading.rom.nlp.engine.processors.impl.SecurityDescriptionProcessorImpl;
 import com.iontrading.rom.nlp.ner.trainingsetgeneration.InstrumentsDataUtil;
+import com.rom.nlp.engine.NLPEngine;
 
 public class NLPBootstrap {
 	private static NLPEngine NLPEngineInstance;

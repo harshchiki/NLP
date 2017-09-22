@@ -7,13 +7,13 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.Optional;
 
-import com.iontrading.rom.nlp.engine.NLPEngine;
 import com.iontrading.rom.nlp.engine.context.TextProcessingContext;
 import com.iontrading.rom.nlp.engine.context.impl.TextProcessingContextImpl;
 import com.iontrading.rom.nlp.engine.processors.NERProcessor;
 import com.iontrading.rom.nlp.engine.processors.SecurityCodeProcessor;
 import com.iontrading.rom.nlp.engine.processors.SecurityDescriptionProcessor;
 import com.iontrading.rom.nlp.ner.NERResult;
+import com.rom.nlp.engine.NLPEngine;
 
 public class NLPEngineImpl implements NLPEngine {
 

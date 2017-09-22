@@ -7,7 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 
-import com.iontrading.rom.nlp.engine.NLPEngine;
+import com.rom.nlp.engine.NLPEngine;
 
 
 public class DummyNLPTest {
