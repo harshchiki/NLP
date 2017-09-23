@@ -1,12 +1,12 @@
 Good morning, please may I have your bids for the below
-out of today on open in $ w/ros
+out of today on open in $ 
 DE0001143378 20mm
 US912834EV64 15mm
 and
 US92922F2Q02 40mm
 
 Good morning, please may I have your bids for the below
-out of today on open in $ w/ros
+out of today on open in $ 
 DE0001143378 20mm
 US912834EV64 15mm
 
@@ -16,14 +16,14 @@ US92922F2Q02 40mm
 DE0001143378 20mm
 US912834EV64 15mm
 Good morning, please may I have your bids
-out of today on open in $ w/ros
+out of today on open in $ 
 and
 US92922F2Q02 40mm
 
 DE0001143378 20mm
 US912834EV64 15mm
 Good morning, please may I have your bids
-out of today on open in $ w/ros
+out of today on open in $ 
 
 and
 US92922F2Q02 40mm
@@ -33,7 +33,7 @@ US912834EV64 15mm
 and
 US92922F2Q02 40mm
 Good morning, please may I have your bids
-out of today on open in $ w/ros
+out of today on open in $ 
 
 DE0001143378 20mm
 US912834EV64 15mm
@@ -41,7 +41,7 @@ US912834EV64 15mm
 and
 US92922F2Q02 40mm
 Good morning, please may I have your bids
-out of today on open in $ w/ros
+out of today on open in $ 
 
 DE0001143378 20mm
 US912834EV64 15mm
@@ -430,7 +430,7 @@ Please may I have your bids 1st-8th Aug
 BUND CPN 07/23 DE0001143261 10m
 UK WAR LOAN 3 ½ 29/12/4 GB0009386284 5,000,000
 
-Val 29 Jun - 09 Oct with ros
+Val 29 Jun - 09 Oct 
 BUND CPN 07/23 DE0001143261 10m
 UK WAR LOAN 3 ½ 29/12/4 GB0009386284 5,000,000
 
@@ -439,18 +439,18 @@ BID UKTI 1 1/4 11/27 GB00B128DH60 7,500,000
 
 BUND CPN 07/23 DE0001143261 10m
 UK WAR LOAN 3 ½ 29/12/4 GB0009386284 5,000,000
-Val 29 Jun - 09 Oct with ros
+Val 29 Jun - 09 Oct 
 
 and Val 1st to 8th August
 BID UKTI 1 1/4 11/27 GB00B128DH60 7,500,000
 
 BUND CPN 07/23 DE0001143261 10m
 UK WAR LOAN 3 ½ 29/12/4 GB0009386284 5,000,000
-Val 29 Jun - 09 Oct with ros
+Val 29 Jun - 09 Oct 
 
 BID UKTI 1 1/4 11/27 GB00B128DH60 7,500,000 and Val 1st to 8th August
 
-Val 29 Jun - 09 Oct with ros
+Val 29 Jun - 09 Oct 
 BUND CPN 07/23 DE0001143261 10m
 UK WAR LOAN 3 ½ 29/12/4 GB0009386284 5,000,000
 
@@ -659,13 +659,13 @@ US92922F2Q02 40mm
 
 DE0001143378 BUND CPN JUL34 A 8.8mil T1W EUR BID wros
 
-Please Bid w/ros
+Please Bid 
 DE0001143378 20mm
 US912834EV64 15mm
 and Offer
 US92922F2Q02 40mm
 
-Please Bid with ros
+Please Bid 
 DE0001143378 20mm
 US912834EV64 15mm
 and Offer
@@ -683,13 +683,13 @@ US912834EV64 15mm
 and Offer
 US92922F2Q02 40mm
 
-DE0001143378 BUND CPN JUL34 A 8.8mil T1W EUR BID w/ros
+DE0001143378 BUND CPN JUL34 A 8.8mil T1W EUR BID 
 
-DE0001143378 BUND CPN JUL34 A 8.8mil T1W EUR BID with ros
+DE0001143378 BUND CPN JUL34 A 8.8mil T1W EUR BID 
 
-DE0001143378 BUND CPN JUL34 A 8.8mil T1W EUR BID with 1 ros
+DE0001143378 BUND CPN JUL34 A 8.8mil T1W EUR BID 
 
-DE0001143378 BUND CPN JUL34 A 8.8mil T1W EUR BID with 3 ros
+DE0001143378 BUND CPN JUL34 A 8.8mil T1W EUR BID 
 
 Please DE0001143378 BUND CPN JUL34 A 8.8mil
 in EUR
@@ -1773,7 +1773,7 @@ bid btp 0 may29 vs offer cpn may21 and cpn feb32 – 25mm – 1 month
 s/1st sep pls?\"
 
 ECB SPOT -17TH JULY DE0001135408 DBR 3 07/04/20 /-0.36
-offer in 6mm w/ros
+offer in 6mm 
 
 offer 34.8m T 4 3/8 05/15/41 30th Jun-5th July thanks
 

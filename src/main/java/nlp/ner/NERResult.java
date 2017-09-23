@@ -32,7 +32,7 @@ public class NERResult<T> {
 	public String toString(){
 		StringBuilder builder = new StringBuilder();
 		
-		builder.append("type {"+this.type + "} value {" + (this.value.isPresent() ? this.value.get() : ""));
+		builder.append("type {"+this.type + "} value {" + (this.value.isPresent() ? this.value.get() : "" + "}"));
 		
 		return builder.toString();
 	}

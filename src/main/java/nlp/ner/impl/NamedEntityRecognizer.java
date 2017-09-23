@@ -13,7 +13,7 @@ import nlp.ner.NERUtils;
 import nlp.ner.models.CustomModels;
 import nlp.ner.models.StandardModels;
 
-
+// uses Apache Open NLP
 public class NamedEntityRecognizer implements INamedEntityRecognizer {
 	// TODO: Ideally this should be injected, using ION 2.0 guidelines
 	private final TokenNameFinderModel tokenNameFinderModel = CustomModels.TOKEN_NAME_FINDER_MODEL;

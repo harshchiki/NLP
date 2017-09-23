@@ -13,13 +13,13 @@ public interface IPattern {
 	void generate();
 
 	default void addToListIfNotEmpty(final StringBuilder builder,
-			final List<String> list){
+			final List<String> trainingSetElements){
 		/*
 		 * new line need not be added, since at the time of training set generation
 		 * new lines are inserted after every list item.
 		 */
-		if(builder != null && builder.length() > 0 && list != null){
-			list.add(builder.toString());
+		if(builder != null && builder.length() > 0 && trainingSetElements != null){
+			trainingSetElements.add(builder.toString());
 		}
 	}
 
@@ -35,5 +35,10 @@ public interface IPattern {
 		Collections.shuffle(lstInstruments);		
 		lstInstruments = lstInstruments.stream().limit(2).collect(Collectors.toList());
 		return lstInstruments;
+	}
+	
+	default int getRandom10() {
+		// should return values {1,2,3,4,5,6,7,8,9,10}
+		return ((int) Math.random())%10 + 1;
 	}
 }
