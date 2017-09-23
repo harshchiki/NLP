@@ -33,12 +33,9 @@ public class NERVerbIsinQty implements IPattern{
 						
 						builder.append(getNERPattern(nerLibrary,
 								new String[] {
-										NERType.Verb.toString(),
-										verb.toString(),
-										NERType.ISIN.toString(),
-										instrument.getIsin(),
-										NERType.Qty.toString(),
-										qty.getDescription()
+										NERType.Verb.toString(), verb.toString(),
+										NERType.ISIN.toString(), instrument.getIsin(),
+										NERType.Qty.toString(), qty.getDescription()
 								}));
 						break;
 					case STANFORD_CORE_NLP:
