@@ -32,9 +32,16 @@ public class SecurityDescriptionParserImpl implements SecurityDescriptionParser 
 			// considering if there is a 70% match
 			if(lcsResult.length > 0 
 					&& getMatchPercentage(lcsResult.length, preProcessedDescription.length()) > 95.0
-					&& areSpacesThereOnEitherSides(line, lcsResult)){
+					&& areSpacesThereOnEitherSides(line, lcsResult)
+					&& matchPercentageByEditDistance(line, lcsResult.startIndex, lcsResult.endIndex, desc)){
 				System.out.println("startindex - "+lcsResult.startIndex+" endIndex = "+lcsResult.endIndex);
-				Closeness closeness = new Closeness(lcsResult.startIndex, lcsResult.endIndex, preProcessedDescription.length(), lcsResult.length);
+				
+				Closeness closeness = new Closeness(lcsResult.startIndex, 
+						lcsResult.endIndex, 
+						preProcessedDescription.length(), 
+						lcsResult.length,
+						line, 
+						desc);
 				putInMap(mapDescCloseness, desc, closeness);
 			}
 		});
@@ -100,6 +107,65 @@ public class SecurityDescriptionParserImpl implements SecurityDescriptionParser 
 		double matchPercent = ((double)matchStringLength/(double)descLength)*100;
 		System.out.println("match percent = "+matchPercent);
 		return matchPercent;
+	}
+	
+	private boolean matchPercentageByEditDistance(final String line, final int startIndex, final int endIndex, final String desc) {
+		int editDistance = getEditDistance(line, startIndex, endIndex, desc);
+		if(Math.abs(editDistance - desc.length()) < 4){
+			// this value 4 is just a value assumed (assumed a small number).
+			// this could vary
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	private int getEditDistance(final String line, final int startIndex, final int endIndex, final String desc) {
+		return editDistanceHelper(line.substring(startIndex, endIndex), desc, endIndex-startIndex, desc.length());
+	}
+	
+	private int editDistanceHelper(String str1, String str2, int m, int n) {
+		// Create a table to store results of subproblems
+        int editDistanceTable[][] = new int[m+1][n+1];
+      
+        // Fill d[][] in bottom up manner
+        for (int i=0; i<=m; i++)
+        {
+            for (int j=0; j<=n; j++)
+            {
+                // If first string is empty, only option is to
+                // insert all characters of second string
+                if (i==0)
+                    editDistanceTable[i][j] = j;  // Min. operations = j
+      
+                // If second string is empty, only option is to
+                // remove all characters of second string
+                else if (j==0)
+                    editDistanceTable[i][j] = i; // Min. operations = i
+      
+                // If last characters are same, ignore last char
+                // and recur for remaining string
+                else if (str1.charAt(i-1) == str2.charAt(j-1))
+                    editDistanceTable[i][j] = editDistanceTable[i-1][j-1];
+      
+                // If last character are different, consider all
+                // possibilities and find minimum
+                else
+                    editDistanceTable[i][j] = 1 + min(editDistanceTable[i][j-1],  // Insert
+                                       editDistanceTable[i-1][j],  // Remove
+                                       editDistanceTable[i-1][j-1]); // Replace
+            }
+        }
+  
+        return editDistanceTable[m][n];
+	}
+	
+	int min(int a, int b) {
+		return a < b ? a : b;
+	}
+	
+	int min(int a, int b, int c) {
+		return c < min(a,b) ? c : min(a,b);
 	}
 	
 	private LCSResult getLengthOfLongestCommonSubsequence(String line, String desc) {
@@ -185,15 +251,19 @@ public class SecurityDescriptionParserImpl implements SecurityDescriptionParser 
 	
 	private class Closeness implements Comparable<Closeness>{
 
-		int startIndex, endIndex; // in line
-		int preProcessDescLength;
-		int lcsLength;
+		final int startIndex, endIndex; // in line
+		final int preProcessDescLength;
+		final int lcsLength;
+		final String line, refDataDesc;
 		
-		Closeness(int startLength, int endIndex, int preProcessDescLength, int lcsLength){
+		Closeness(int startLength, int endIndex, int preProcessDescLength, int lcsLength, 
+				String line, String refDataDesc){
 			this.startIndex = startLength;
 			this.endIndex = endIndex;
 			this.preProcessDescLength = preProcessDescLength;
 			this.lcsLength = lcsLength;
+			this.line = line;
+			this.refDataDesc = refDataDesc;
 		}
 		
 		@Override
