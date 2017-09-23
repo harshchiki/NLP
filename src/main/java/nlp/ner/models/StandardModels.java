@@ -47,7 +47,7 @@ public class StandardModels {
 	private static TokenNameFinderModel getTokenNameFinderModel(){
 		TokenNameFinderModel tokenNameFinderModel = null;
 		try {
-			final InputStream is = new FileInputStream(NERModelConstants.STANDARD_ENGLISH_NER_TOKENIZER_TRAINED_BINARY);
+			final InputStream is = new FileInputStream(NERModelConstants.STANDARD_ENGLISH_NER_TOKENIZER_TRAINED_BINARY_APACHE);
 			try {
 				tokenNameFinderModel = new TokenNameFinderModel(is);
 			} catch (IOException e) {
@@ -69,7 +69,7 @@ public class StandardModels {
 		SentenceModel sentenceModel = null;
 		InputStream is;
 		try {
-			is = new FileInputStream(NERModelConstants.STANDARD_ENGLISH_SENTENCE_TRAINED_BINARY);
+			is = new FileInputStream(NERModelConstants.STANDARD_ENGLISH_SENTENCE_TRAINED_BINARY_APACHE);
 			try {
 				sentenceModel = new SentenceModel(is);
 				is.close();
@@ -87,7 +87,7 @@ public class StandardModels {
 	private static ParserModel getParserModel(){
 		ParserModel parserModel = null;
 		try {
-			InputStream is = new FileInputStream(NERModelConstants.STANDARD_ENGLISH_PARSER_TRAINED_BINARY);
+			InputStream is = new FileInputStream(NERModelConstants.STANDARD_ENGLISH_PARSER_TRAINED_BINARY_APACHE);
 			try {
 				parserModel = new ParserModel(is);				
 				is.close();
@@ -109,7 +109,7 @@ public class StandardModels {
 	private static ChunkerModel getChunkerModel(){
 		ChunkerModel chunkerModel = null;
 		try {
-			InputStream is = new FileInputStream(NERModelConstants.STANDARD_ENGLISH_CHUNKER_TRAINED_BINARY);
+			InputStream is = new FileInputStream(NERModelConstants.STANDARD_ENGLISH_CHUNKER_TRAINED_BINARY_APACHE);
 			try {
 				chunkerModel = new ChunkerModel(is);
 				is.close(); // should be in finally
@@ -129,7 +129,7 @@ public class StandardModels {
 	
 	private static POSModel getPOSModel(){
 		POSModel posModel = null;
-		posModel = new POSModelLoader().load(new File(NERModelConstants.STANDARD_ENGLISH_POS_TRAINED_BINARY));
+		posModel = new POSModelLoader().load(new File(NERModelConstants.STANDARD_ENGLISH_POS_TRAINED_BINARY_APACHE));
 		return posModel;
 	}
 	
@@ -140,7 +140,7 @@ public class StandardModels {
 	private static Tokenizer getTokenizer(){
 		Tokenizer tokenizer = null;
 		try {
-			InputStream is = new FileInputStream(NERModelConstants.STANDARD_ENGLISH_TOKENIZER_TRAINED_BINARY);
+			InputStream is = new FileInputStream(NERModelConstants.STANDARD_ENGLISH_TOKENIZER_TRAINED_BINARY_APACHE);
 			try {
 				TokenizerModel model = new TokenizerModel(is);
 				tokenizer = new TokenizerME(model);
@@ -169,7 +169,7 @@ public class StandardModels {
 		InputStream is;
 		try {
 //			is = new FileInputStream("en-ner-person.bin");
-			is = new FileInputStream(NERModelConstants.STANDARD_ENGLISH_NAME_FINDER_NER_TRAINED_BINARY);
+			is = new FileInputStream(NERModelConstants.STANDARD_ENGLISH_NAME_FINDER_NER_TRAINED_BINARY_APACHE);
 			try {
 				tokenNameFinderModel = new TokenNameFinderModel(is);
 				nameFinder = new NameFinderME(tokenNameFinderModel);

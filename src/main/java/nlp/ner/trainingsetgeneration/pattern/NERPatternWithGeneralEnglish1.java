@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import nlp.ner.trainingsetgeneration.Instrument;
+import nlp.ner.trainingsetgeneration.NERLibrary;
 import nlp.ner.trainingsetgeneration.enums.BaseInfoDescriptor;
 import nlp.ner.trainingsetgeneration.enums.EnglishWishes;
 import nlp.ner.trainingsetgeneration.enums.Verbs;
@@ -26,7 +27,7 @@ public class NERPatternWithGeneralEnglish1 implements IPattern {
 	}
 
 	@Override
-	public void generate() {
+	public void generate(NERLibrary nerLibrary) {
 		Arrays.stream(BaseInfoDescriptor.values()).forEach(baseInfo -> {
 			Arrays.stream(EnglishWishes.values()).forEach(wish -> {
 				Arrays.stream(Verbs.values()).forEach(verb -> {

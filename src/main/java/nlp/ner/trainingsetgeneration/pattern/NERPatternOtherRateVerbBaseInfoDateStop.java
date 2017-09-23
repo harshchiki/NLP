@@ -8,6 +8,7 @@ import java.util.Map;
 import com.beust.jcommander.internal.Lists;
 
 import nlp.ner.trainingsetgeneration.Instrument;
+import nlp.ner.trainingsetgeneration.NERLibrary;
 import nlp.ner.trainingsetgeneration.enums.BaseInfoDescriptor;
 import nlp.ner.trainingsetgeneration.enums.Dates;
 import nlp.ner.trainingsetgeneration.enums.Rates;
@@ -36,7 +37,7 @@ public class NERPatternOtherRateVerbBaseInfoDateStop implements IPattern {
 	}
 
 	@Override
-	public void generate() {
+	public void generate(NERLibrary nerLibrary) {
 		getFirstKInstrumentsAfterShuffling(instruments.values(),5).forEach(instrument -> {
 			Arrays.stream(Rates.values()).forEach(rate -> {
 				Arrays.stream(Verbs.values()).forEach(verb -> {

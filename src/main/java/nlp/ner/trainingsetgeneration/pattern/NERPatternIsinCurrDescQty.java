@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import nlp.ner.trainingsetgeneration.Instrument;
+import nlp.ner.trainingsetgeneration.NERLibrary;
 import nlp.ner.trainingsetgeneration.enums.Currencies;
 import nlp.ner.trainingsetgeneration.enums.Dates;
 import nlp.ner.trainingsetgeneration.enums.Quantities;
@@ -25,7 +26,7 @@ public class NERPatternIsinCurrDescQty implements IPattern {
 	}
 
 	@Override
-	public void generate() {
+	public void generate(NERLibrary nerLibrary) {
 		Arrays.stream(Quantities.values()).forEach(qty -> {
 			Arrays.stream(Currencies.values()).forEach(currency -> {
 				Arrays.stream(Dates.values()).forEach(date -> {

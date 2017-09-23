@@ -8,9 +8,10 @@ import java.util.stream.Collectors;
 import com.beust.jcommander.internal.Lists;
 
 import nlp.ner.trainingsetgeneration.Instrument;
+import nlp.ner.trainingsetgeneration.NERLibrary;
 
 public interface IPattern {
-	void generate();
+	void generate(NERLibrary nerLibrary);
 
 	default void addToListIfNotEmpty(final StringBuilder builder,
 			final List<String> trainingSetElements){
@@ -40,5 +41,35 @@ public interface IPattern {
 	default int getRandom10() {
 		// should return values {1,2,3,4,5,6,7,8,9,10}
 		return ((int) Math.random())%10 + 1;
+	}
+	
+	default String getNERPattern(final NERLibrary nerLibrary, String... values) {
+		StringBuilder builder = new StringBuilder();
+		
+		switch(nerLibrary) {
+		case APACHE_OPEN_NLP:
+			StringBuilder formatPart1 = new StringBuilder();
+			for(int i = 0;i<values.length/2;i++) {
+				formatPart1.append("<START:%s> %s <END> "); // ends with an additional space
+			}
+			
+			builder.append(String.format(formatPart1.toString(), values));
+			break;
+		case STANFORD_CORE_NLP:
+			for(int i = 0;i<values.length;i++) {
+				builder.append(values[i]);
+				if(i%2 == 1) {
+					builder.append("\n"); // new line for next annotation
+				}else {
+					builder.append("\t"); // tab space between value and type
+				}
+			}
+			
+			builder.append("\n");
+			break;
+		}
+		
+		
+		return builder.toString();
 	}
 }

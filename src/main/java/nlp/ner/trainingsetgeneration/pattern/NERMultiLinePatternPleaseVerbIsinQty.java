@@ -8,6 +8,7 @@ import java.util.Map;
 import com.google.common.collect.Lists;
 
 import nlp.ner.trainingsetgeneration.Instrument;
+import nlp.ner.trainingsetgeneration.NERLibrary;
 import nlp.ner.trainingsetgeneration.enums.Quantities;
 import nlp.ner.trainingsetgeneration.enums.Verbs;
 
@@ -34,7 +35,7 @@ public class NERMultiLinePatternPleaseVerbIsinQty implements IPattern {
 	}
 
 	@Override
-	public void generate() {
+	public void generate(NERLibrary nerLibrary) {
 
 
 		List<List<Instrument>> instrumentPartitionList=Lists.partition(new LinkedList<Instrument>(instruments.values()), 3);

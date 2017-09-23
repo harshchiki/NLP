@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import nlp.ner.trainingsetgeneration.Instrument;
+import nlp.ner.trainingsetgeneration.NERLibrary;
 
 /**
  * @author Harsh.Chiki
@@ -22,7 +23,7 @@ public class NERPatternVerbQtyDescIsinStartDate implements IPattern {
 	}
 	
 	@Override
-	public void generate() {
+	public void generate(NERLibrary nerLibrary) {
 		
 		getFirstKInstrumentsAfterShuffling(instruments.values(),5).forEach(instrument ->{
 			final StringBuilder builder = new StringBuilder();

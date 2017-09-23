@@ -28,56 +28,103 @@ import nlp.ner.trainingsetgeneration.pattern.NERPatternRateVerbBaseInfoDateStop;
 import nlp.ner.trainingsetgeneration.pattern.NERPatternVerbQtyDescIsinStartDate;
 import nlp.ner.trainingsetgeneration.pattern.NERPatternWithGeneralEnglish1;
 import nlp.ner.trainingsetgeneration.pattern.NERPatternWithGeneralEnglish2;
+import nlp.ner.trainingsetgeneration.pattern.more.NERCurrIsinQuantity;
+import nlp.ner.trainingsetgeneration.pattern.more.NERDescIsinQty;
+import nlp.ner.trainingsetgeneration.pattern.more.NERIsinQuantity;
+import nlp.ner.trainingsetgeneration.pattern.more.NERIsinQuantityVerbDescStartDateEndDate;
+import nlp.ner.trainingsetgeneration.pattern.more.NERQtyDescTenor;
+import nlp.ner.trainingsetgeneration.pattern.more.NERTenorIsinQty;
+import nlp.ner.trainingsetgeneration.pattern.more.NERVerbIsinQty;
 
 public class NERTrainingPatterns {
-	public static List<IPattern>  get(List<String> trainingSet,Map<String,Instrument> instruments){
-		List<IPattern> nerPatterns = new LinkedList<IPattern>();
+	public static List<IPattern>  getApacheOpenNLPPatterns(List<String> trainingSetElements, Map<String,Instrument> instruments){
+		List<IPattern> patterns = new LinkedList<>();
 		
-		nerPatterns.add(new NERPatternCurrPleaseVerb(trainingSet, instruments));
+		patterns.add(new NERCurrIsinQuantity(trainingSetElements, instruments));
 		
-		nerPatterns.add(new NERPatternCurrRateDescIsinDate(trainingSet, instruments));
+		patterns.add(new NERDescIsinQty(trainingSetElements, instruments));
 		
-		nerPatterns.add(new NERPatternDescIsinCurr(trainingSet, instruments));
+		patterns.add(new NERIsinQuantity(trainingSetElements, instruments));
 		
-		nerPatterns.add(new NERPatternIsinCurrDesc(trainingSet, instruments));
+		patterns.add(new NERIsinQuantityVerbDescStartDateEndDate(trainingSetElements, instruments));
 		
-		nerPatterns.add(new NERPatternIsinCurrDescQty(trainingSet, instruments));
+		patterns.add(new NERQtyDescTenor(trainingSetElements, instruments));
 		
-		nerPatterns.add(new NERPatternIsinDescCurrRateStartDateStopDate(trainingSet, instruments));
+		patterns.add(new NERTenorIsinQty(trainingSetElements, instruments));
 		
-		nerPatterns.add(new NERPatternIsinDesc(trainingSet, instruments));
+		patterns.add(new NERVerbIsinQty(trainingSetElements, instruments));
 		
-		nerPatterns.add(new NERPatternIsinDescStartDateCurrency(trainingSet, instruments));
-		
-		nerPatterns.add(new NERPatternIsinDescStartDateDateStopRate(trainingSet, instruments));
-		
-		nerPatterns.add(new NERPatternIsinDesQty(trainingSet, instruments));
-		
-		nerPatterns.add(new NERPatternIsinQtyDesc(trainingSet, instruments));
-		
-		nerPatterns.add(new NERPatternLookingForIsinDescQtyStartDate(trainingSet, instruments));
-		
-		nerPatterns.add(new NERPatternOtherRateVerbBaseInfoDateStop(trainingSet, instruments));
-		
-		nerPatterns.add(new NERPatternPleaseMayIHaveVerbCurr(trainingSet, instruments));
-		
-		nerPatterns.add(new NERPatternPleaseMayIHaveVerbsDateStartDateStop(trainingSet));
-		
-		nerPatterns.add(new NERPatternRateVerbBaseInfoDateStop(trainingSet, instruments));
-		
-		nerPatterns.add(new NERPatternVerbQtyDescIsinStartDate(trainingSet, instruments));
-		
-		nerPatterns.add(new NERPatternWithGeneralEnglish1(trainingSet, instruments));
-		
-		nerPatterns.add(new NERPatternWithGeneralEnglish2(trainingSet, instruments));
+		return patterns;
+	}
+	
+//	public static List<IPattern>  getApacheOpenNLPPatterns(List<String> trainingSet,Map<String,Instrument> instruments){
+//		List<IPattern> nerPatterns = new LinkedList<IPattern>();
+//		
+//		nerPatterns.add(new NERPatternCurrPleaseVerb(trainingSet, instruments));
+//		
+//		nerPatterns.add(new NERPatternCurrRateDescIsinDate(trainingSet, instruments));
+//		
+//		nerPatterns.add(new NERPatternDescIsinCurr(trainingSet, instruments));
+//		
+//		nerPatterns.add(new NERPatternIsinCurrDesc(trainingSet, instruments));
+//		
+//		nerPatterns.add(new NERPatternIsinCurrDescQty(trainingSet, instruments));
+//		
+//		nerPatterns.add(new NERPatternIsinDescCurrRateStartDateStopDate(trainingSet, instruments));
+//		
+//		nerPatterns.add(new NERPatternIsinDesc(trainingSet, instruments));
+//		
+//		nerPatterns.add(new NERPatternIsinDescStartDateCurrency(trainingSet, instruments));
+//		
+//		nerPatterns.add(new NERPatternIsinDescStartDateDateStopRate(trainingSet, instruments));
+//		
+//		nerPatterns.add(new NERPatternIsinDesQty(trainingSet, instruments));
+//		
+//		nerPatterns.add(new NERPatternIsinQtyDesc(trainingSet, instruments));
+//		
+//		nerPatterns.add(new NERPatternLookingForIsinDescQtyStartDate(trainingSet, instruments));
+//		
+//		nerPatterns.add(new NERPatternOtherRateVerbBaseInfoDateStop(trainingSet, instruments));
+//		
+//		nerPatterns.add(new NERPatternPleaseMayIHaveVerbCurr(trainingSet, instruments));
+//		
+//		nerPatterns.add(new NERPatternPleaseMayIHaveVerbsDateStartDateStop(trainingSet));
+//		
+//		nerPatterns.add(new NERPatternRateVerbBaseInfoDateStop(trainingSet, instruments));
+//		
+//		nerPatterns.add(new NERPatternVerbQtyDescIsinStartDate(trainingSet, instruments));
+//		
+//		nerPatterns.add(new NERPatternWithGeneralEnglish1(trainingSet, instruments));
+//		
+//		nerPatterns.add(new NERPatternWithGeneralEnglish2(trainingSet, instruments));
+//
+//		nerPatterns.add(new NERPatternPleaseDescVerbQty(trainingSet, instruments));
+//		
+//		nerPatterns.add(new NERPatternPleaseVerbQtyDesc(trainingSet, instruments));
+//
+//		nerPatterns.add(new NERMultiLinePatternPleaseVerbDurIsinQty(trainingSet, instruments));
+//		
+//		nerPatterns.add(new NERMultiLinePatternPleaseVerbIsinQty(trainingSet, instruments));
+//		
+//		return nerPatterns;
+//	}
 
-		nerPatterns.add(new NERPatternPleaseDescVerbQty(trainingSet, instruments));
+	public static List<IPattern> getStanfordNERPatterns(List<String> trainingSetElements, Map<String, Instrument> instruments){
+		List<IPattern> nerPatterns = new LinkedList<>();
 		
-		nerPatterns.add(new NERPatternPleaseVerbQtyDesc(trainingSet, instruments));
+		nerPatterns.add(new NERCurrIsinQuantity(trainingSetElements, instruments));
+		
+		nerPatterns.add(new NERDescIsinQty(trainingSetElements, instruments));
+		
+		nerPatterns.add(new NERIsinQuantity(trainingSetElements, instruments));
+		
+		nerPatterns.add(new NERIsinQuantityVerbDescStartDateEndDate(trainingSetElements, instruments));
+		
+		nerPatterns.add(new NERQtyDescTenor(trainingSetElements, instruments));
 
-		nerPatterns.add(new NERMultiLinePatternPleaseVerbDurIsinQty(trainingSet, instruments));
+		nerPatterns.add(new NERTenorIsinQty(trainingSetElements, instruments));
 		
-		nerPatterns.add(new NERMultiLinePatternPleaseVerbIsinQty(trainingSet, instruments));
+		nerPatterns.add(new NERVerbIsinQty(trainingSetElements, instruments));
 		
 		return nerPatterns;
 	}

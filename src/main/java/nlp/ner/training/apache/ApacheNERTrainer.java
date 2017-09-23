@@ -1,4 +1,4 @@
-package nlp.ner.training;
+package nlp.ner.training.apache;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,6 +8,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
+import nlp.ner.training.INLPTrainer;
 import opennlp.tools.ml.maxent.quasinewton.QNTrainer;
 import opennlp.tools.namefind.BioCodec;
 import opennlp.tools.namefind.NameFinderME;
@@ -22,12 +23,12 @@ import opennlp.tools.util.ObjectStream;
 import opennlp.tools.util.PlainTextByLineStream;
 import opennlp.tools.util.TrainingParameters;
 
-public class NERTrainer implements INLPTrainer {
+public class ApacheNERTrainer implements INLPTrainer {
 	private final String trainingFilePath;
 	private final String modelPath;
 	private final TrainingParameters trainingParams;
 
-	public NERTrainer(final String trainingFilePath, final String modelPath){
+	public ApacheNERTrainer(final String trainingFilePath, final String modelPath){
 		this.trainingFilePath=trainingFilePath;
 		this.modelPath=modelPath;
 		this.trainingParams = new TrainingParameters();
@@ -36,7 +37,7 @@ public class NERTrainer implements INLPTrainer {
 		trainingParams.put(TrainingParameters.ALGORITHM_PARAM, QNTrainer.MAXENT_QN_VALUE);
 	}
 	
-	public NERTrainer(final String trainingFilePath,
+	public ApacheNERTrainer(final String trainingFilePath,
 			final String modelPath,
 			final int iterationsParam,
 			final int cutOffParam,

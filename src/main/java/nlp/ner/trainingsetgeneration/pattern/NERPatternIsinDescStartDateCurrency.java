@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import nlp.ner.trainingsetgeneration.Instrument;
+import nlp.ner.trainingsetgeneration.NERLibrary;
 import nlp.ner.trainingsetgeneration.enums.Currencies;
 import nlp.ner.trainingsetgeneration.enums.Dates;
 
@@ -25,7 +26,7 @@ public class NERPatternIsinDescStartDateCurrency implements IPattern {
 	}
 
 	@Override
-	public void generate() {
+	public void generate(NERLibrary nerLibrary) {
 		Arrays.stream(Currencies.values()).forEach(currency -> {
 			Arrays.stream(Dates.values()).forEach(date -> {
 				getFirstKInstrumentsAfterShuffling(instruments.values(),5).forEach(instrument ->{

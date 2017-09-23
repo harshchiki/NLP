@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import nlp.ner.trainingsetgeneration.Instrument;
+import nlp.ner.trainingsetgeneration.NERLibrary;
 import nlp.ner.trainingsetgeneration.enums.Quantities;
 import nlp.ner.trainingsetgeneration.enums.Verbs;
 
@@ -27,7 +28,7 @@ public class NERPatternPleaseDescVerbQty implements IPattern {
 	}
 
 	@Override
-	public void generate() {
+	public void generate(NERLibrary nerLibrary) {
 		getFirstKInstrumentsAfterShuffling(instruments.values(),5).forEach(instrument -> {
 			Arrays.stream(Verbs.values()).forEach(verb -> {
 				Arrays.stream(Quantities.values()).forEach(quantity -> {
