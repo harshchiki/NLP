@@ -143,8 +143,8 @@ public class SecurityDescriptionParserImpl implements SecurityDescriptionParser 
                 else if (j==0)
                     editDistanceTable[i][j] = i; // Min. operations = i
       
-                // If last characters are same, ignore last char
-                // and recur for remaining string
+                // If last characters are same, 
+                // bring forward the left upper diagonal value
                 else if (str1.charAt(i-1) == str2.charAt(j-1))
                     editDistanceTable[i][j] = editDistanceTable[i-1][j-1];
       
