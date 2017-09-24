@@ -9,11 +9,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import me.xdrop.fuzzywuzzy.FuzzySearch;
 import nlp.engine.parsers.SecurityDescriptionParser;
 
 
 
 public class SecurityDescriptionParserImpl implements SecurityDescriptionParser {
+	
+	
 	private final Collection<String> descriptions;
 	
 	public SecurityDescriptionParserImpl(Collection<String> descriptions) {
@@ -288,6 +291,52 @@ public class SecurityDescriptionParserImpl implements SecurityDescriptionParser 
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(Integer.valueOf(2).compareTo(Integer.valueOf(3)));
+		// https://github.com/harshchiki/fuzzywuzzy
+		
+		String s1 = "BUND CPN 07/23 DE0001143261 10m";
+		String s2 = "BUND CPN 07/23/2018";
+		
+		
+		
+		// Simple Ratio
+		System.out.println("Simple Ratio");
+		System.out.println(FuzzySearch.ratio(s1, s2));
+		
+		
+		System.out.println("\n\n\n");
+		
+		//Partial ratio
+		System.out.println("Partial Ratio");
+		System.out.println(FuzzySearch.partialRatio(s1, s2));
+		
+		
+		System.out.println("\n\n\n");
+		
+		// Token Sort Partial Ratio
+		System.out.println("Token Sort Partial Ratio");
+		System.out.println(FuzzySearch.tokenSortPartialRatio(s1,s2));
+		
+		System.out.println("\n\n\n");
+		
+		
+		// Token Sort Ratio
+		System.out.println("Token Sort Ratio");
+		System.out.println(FuzzySearch.tokenSortRatio(s1,s2));
+		
+		System.out.println("\n\n\n");
+		
+		// Token Set Ratio
+		System.out.println("Token Set Ratio");
+		System.out.println(FuzzySearch.tokenSetRatio(s1,s2));
+		
+		System.out.println("\n\n\n");
+		
+		System.out.println("Weighted Ratio");
+		System.out.println(FuzzySearch.weightedRatio(s1,s2));
+		
+		System.out.println("\n\n\n");
+		
+		// extract methods yet to be evaluated - given in the link, placed at the beginning of this method.
+		
 	}
 }
