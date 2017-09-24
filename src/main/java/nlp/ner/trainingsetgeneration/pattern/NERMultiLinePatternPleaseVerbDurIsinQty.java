@@ -44,6 +44,8 @@ public class NERMultiLinePatternPleaseVerbDurIsinQty implements IPattern {
 				Arrays.stream(Duration.values()).forEach(duration -> {
 				Arrays.stream(Quantities.values()).forEach(quantity -> {
 					final StringBuilder builder = new StringBuilder();
+					
+					
 					builder.append(String.format("Please <START:VERB> %s <END> <START:DURATION> %s <END> ",verb,duration));
 					instrumentList.stream().forEach(instrument->{
 						

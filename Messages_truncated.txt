@@ -1,82 +1,82 @@
-Good morning, please may I have your bids for the below
-out of today on open in $ 
+#Good morning, please may I have your bids for the below
+#out of today on open in $ 
 DE0001143378 20mm
 US912834EV64 15mm
 and
 US92922F2Q02 40mm
 
-Good morning, please may I have your bids for the below
-out of today on open in $ 
+#Good morning, please may I have your bids for the below
+#out of today on open in $ 
 DE0001143378 20mm
 US912834EV64 15mm
-
-and
-US92922F2Q02 40mm
-
-DE0001143378 20mm
-US912834EV64 15mm
-Good morning, please may I have your bids
-out of today on open in $ 
-and
-US92922F2Q02 40mm
-
-DE0001143378 20mm
-US912834EV64 15mm
-Good morning, please may I have your bids
-out of today on open in $ 
 
 and
 US92922F2Q02 40mm
 
 DE0001143378 20mm
 US912834EV64 15mm
+#Good morning, please may I have your bids
+#out of today on open in $ 
 and
 US92922F2Q02 40mm
-Good morning, please may I have your bids
-out of today on open in $ 
+
+DE0001143378 20mm
+US912834EV64 15mm
+#Good morning, please may I have your bids
+#out of today on open in $ 
+
+and
+US92922F2Q02 40mm
+
+DE0001143378 20mm
+US912834EV64 15mm
+and
+US92922F2Q02 40mm
+#Good morning, please may I have your bids
+#out of today on open in $ 
 
 DE0001143378 20mm
 US912834EV64 15mm
 
 and
 US92922F2Q02 40mm
-Good morning, please may I have your bids
-out of today on open in $ 
+#Good morning, please may I have your bids
+#out of today on open in $ 
 
 DE0001143378 20mm
 US912834EV64 15mm
 US92922F2Q02 40mm
-Good morning, please may I have your bids for the above
-out of today on open in $
+#Good morning, please may I have your bids for the above
+#out of today on open in $
 
 DE0001143378 20mm
 OFFER US912834EV64 15mm
 US92922F2Q02 40mm
-Good morning, please may I have your bids for the above
-out of today on open in $, unless different specified
+#Good morning, please may I have your bids for the above
+#out of today on open in $, unless different specified
 
 DE0001143378 20mm
 EUR US912834EV64 15mm
 US92922F2Q02 40mm
-Good morning, please may I have your bids for the above
-out of today on open in $, unless different specified
+#Good morning, please may I have your bids for the above
+#out of today on open in $, unless different specified
 
 DE0001143378 20mm
 T1M US912834EV64 15mm
 US92922F2Q02 40mm
-Good morning, please may I have your bids for the above
-out of today on open in $, unless different specified
+#Good morning, please may I have your bids for the above
+#out of today on open in $, unless different specified
 
 DE0001143378 20mm
 US912834EV64 15mm
-May I please have your bids for the above in $
+#May I please have your bids for the above in $
 
 US92922F2Q02 40mm
 NEEDS SPOT OPEN
 
 DE0001143378 20mm
 US912834EV64 15mm
-May I please have your bids for the above in $
+#May I please have your bids for the above in $
 
 NEEDS SPOT OPEN for the following
 US92922F2Q02 40mm

@@ -34,14 +34,14 @@ public class NLPEngineImpl implements NLPEngine {
 		// context creation
 		TextProcessingContext textProcessingContext = new TextProcessingContextImpl(lineToProcess);
 		
-//		this.secCodeProcessor.process(textProcessingContext);
+		this.secCodeProcessor.process(textProcessingContext);
 //		this.secDescriptionProcessor.process(textProcessingContext);
 		this.nerProcessor.process(textProcessingContext);
 		
 		
-		logNERResultsOnConsole(lineToProcess, textProcessingContext);
-//		replaceTokensInNERResults(textProcessingContext);
 //		logNERResultsOnConsole(lineToProcess, textProcessingContext);
+		replaceTokensInNERResults(textProcessingContext);
+		logNERResultsOnConsole(lineToProcess, textProcessingContext);
 		
 //		logNERResults(lineToProcess, textProcessingContext);
 	}

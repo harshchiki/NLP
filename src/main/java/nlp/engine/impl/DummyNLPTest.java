@@ -31,7 +31,7 @@ public class DummyNLPTest {
 			
 			while ((readLine = b.readLine()) != null) {
 				System.out.println("ReadLine -- > "+readLine);
-				if(readLine.length() > 0) {
+				if(readLine.length() > 0 && !readLine.startsWith("#")) {
 					Arrays.stream(readLine.split("\\n")).forEach(ln -> {
 						System.out.println("line passed -- > "+ln);
 						nlpEngine.process(ln);
