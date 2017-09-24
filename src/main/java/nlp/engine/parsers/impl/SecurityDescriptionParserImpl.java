@@ -3,11 +3,9 @@ package nlp.engine.parsers.impl;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import me.xdrop.fuzzywuzzy.FuzzySearch;
 import nlp.engine.parsers.SecurityDescriptionParser;
@@ -26,18 +24,20 @@ public class SecurityDescriptionParserImpl implements SecurityDescriptionParser 
 	@Override
 	public Iterable<String> getSecurityDescription(String line) {
 		
-		Map<String, List<Closeness>> mapDescCloseness = new HashMap<>(); // implement this
+		// for each description that close matches the line, we have a 
+		// map of desc to list of closeness, which encapsulates the boundaries of text in 'line'.
+		Map<String, List<Closeness>> mapDescCloseness = new HashMap<>(); 
 		
 		descriptions.forEach(desc -> {
 			String preProcessedDescription = preProcessDescription(desc);
 			LCSResult lcsResult = getLengthOfLongestCommonSubsequence(line, preProcessedDescription);
-			System.out.println("line -> "+line);
 			// considering if there is a 70% match
 			if(lcsResult.length > 0 
-					&& getMatchPercentage(lcsResult.length, preProcessedDescription.length()) > 95.0
+//					&& getMatchPercentage(lcsResult.length, preProcessedDescription.length()) > 95.0
 					&& areSpacesThereOnEitherSides(line, lcsResult)
-					&& matchPercentageByEditDistance(line, lcsResult.startIndex, lcsResult.endIndex, desc)){
-				System.out.println("startindex - "+lcsResult.startIndex+" endIndex = "+lcsResult.endIndex);
+//					&& matchPercentageByEditDistance(line, lcsResult.startIndex, lcsResult.endIndex, desc)
+					
+					){
 				
 				Closeness closeness = new Closeness(lcsResult.startIndex, 
 						lcsResult.endIndex, 
@@ -50,7 +50,7 @@ public class SecurityDescriptionParserImpl implements SecurityDescriptionParser 
 		});
 		
 		
-		Set<String> descSet = new HashSet<>();
+		List<Closeness> descSet = new LinkedList<>();
 		
 		mapDescCloseness.entrySet().forEach(entry -> {
 			String desc = entry.getKey();
@@ -58,11 +58,17 @@ public class SecurityDescriptionParserImpl implements SecurityDescriptionParser 
 			
 			Collections.sort(lstCloseness);
 			
-			Closeness bestCloseness = lstCloseness.get(0);
-			descSet.add(line.substring(bestCloseness.startIndex, bestCloseness.endIndex));
+			Closeness bestCloseness = lstCloseness.get(lstCloseness.size() - 1);
+			descSet.add(bestCloseness);
 		});
 
-		return descSet;
+		Collections.sort(descSet);
+		
+		// the desc with the lowest levenshtein distance is closest to the one in 'line', and so should be returned.
+		List<String> securityDescription = new LinkedList<>(); // TODO: ideally this should be just a string, not a collection.
+		Closeness bestDesc = descSet.get(descSet.size() - 1);
+		securityDescription.add(line.substring(bestDesc.startIndex, bestDesc.endIndex));
+		return securityDescription;
 	}
 
 	private void putInMap(Map<String, List<Closeness>> mapDescCloseness,
@@ -108,7 +114,6 @@ public class SecurityDescriptionParserImpl implements SecurityDescriptionParser 
 		}
 		
 		double matchPercent = ((double)matchStringLength/(double)descLength)*100;
-		System.out.println("match percent = "+matchPercent);
 		return matchPercent;
 	}
 	
@@ -258,6 +263,7 @@ public class SecurityDescriptionParserImpl implements SecurityDescriptionParser 
 		final int preProcessDescLength;
 		final int lcsLength;
 		final String line, refDataDesc;
+		final int partialRatioLevenshteinDistance;
 		
 		Closeness(int startLength, int endIndex, int preProcessDescLength, int lcsLength, 
 				String line, String refDataDesc){
@@ -267,10 +273,33 @@ public class SecurityDescriptionParserImpl implements SecurityDescriptionParser 
 			this.lcsLength = lcsLength;
 			this.line = line;
 			this.refDataDesc = refDataDesc;
+			
+			this.partialRatioLevenshteinDistance = FuzzySearch.partialRatio(line.substring(startIndex, endIndex), 
+					refDataDesc);
 		}
 		
 		@Override
 		public int compareTo(Closeness o) {
+			return comparisonApproachUsingLevenshteinDistance(o);
+			
+//			return comparisonApproach1(o);
+			
+		}
+
+		private int comparisonApproachUsingLevenshteinDistance(Closeness o) {
+			int thisPartialRatio = this.partialRatioLevenshteinDistance;
+			int otherPartialRatio = o.partialRatioLevenshteinDistance;
+			
+			if(thisPartialRatio > otherPartialRatio) {
+				return 1;
+			}else if(thisPartialRatio == otherPartialRatio) {
+				return 0;
+			}else {
+				return -1;
+			}
+		}
+
+		private int comparisonApproach1(Closeness o) {
 			int thisMatchLength = endIndex-startIndex;
 			int thisPreProcesedDescLength = preProcessDescLength;
 			int thisCloseness = Math.abs(thisMatchLength - thisPreProcesedDescLength);
@@ -293,8 +322,11 @@ public class SecurityDescriptionParserImpl implements SecurityDescriptionParser 
 	public static void main(String[] args) {
 		// https://github.com/harshchiki/fuzzywuzzy
 		
-		String s1 = "BUND CPN 07/23 DE0001143261 10m";
-		String s2 = "BUND CPN 07/23/2018";
+		String s1 = "BUND CPN 07/23"
+				+"DE0001143261 10m";
+		String s2 = "BUND CPN 07/23";
+		
+		System.out.println("Desc length = "+s2.length()+" line length = "+s1.length() + " difference = "+(s1.length() - s2.length()));
 		
 		
 		
@@ -303,38 +335,38 @@ public class SecurityDescriptionParserImpl implements SecurityDescriptionParser 
 		System.out.println(FuzzySearch.ratio(s1, s2));
 		
 		
-		System.out.println("\n\n\n");
-		
+//		System.out.println("\n\n\n");
+//		
 		//Partial ratio
 		System.out.println("Partial Ratio");
 		System.out.println(FuzzySearch.partialRatio(s1, s2));
-		
-		
-		System.out.println("\n\n\n");
-		
-		// Token Sort Partial Ratio
-		System.out.println("Token Sort Partial Ratio");
-		System.out.println(FuzzySearch.tokenSortPartialRatio(s1,s2));
-		
-		System.out.println("\n\n\n");
-		
-		
-		// Token Sort Ratio
-		System.out.println("Token Sort Ratio");
-		System.out.println(FuzzySearch.tokenSortRatio(s1,s2));
-		
-		System.out.println("\n\n\n");
-		
-		// Token Set Ratio
-		System.out.println("Token Set Ratio");
-		System.out.println(FuzzySearch.tokenSetRatio(s1,s2));
-		
-		System.out.println("\n\n\n");
-		
-		System.out.println("Weighted Ratio");
-		System.out.println(FuzzySearch.weightedRatio(s1,s2));
-		
-		System.out.println("\n\n\n");
+//		
+//		
+//		System.out.println("\n\n\n");
+//		
+//		// Token Sort Partial Ratio
+//		System.out.println("Token Sort Partial Ratio");
+//		System.out.println(FuzzySearch.tokenSortPartialRatio(s1,s2));
+//		
+//		System.out.println("\n\n\n");
+//		
+//		
+//		// Token Sort Ratio
+//		System.out.println("Token Sort Ratio");
+//		System.out.println(FuzzySearch.tokenSortRatio(s1,s2));
+//		
+//		System.out.println("\n\n\n");
+//		
+//		// Token Set Ratio
+//		System.out.println("Token Set Ratio");
+//		System.out.println(FuzzySearch.tokenSetRatio(s1,s2));
+//		
+//		System.out.println("\n\n\n");
+//		
+//		System.out.println("Weighted Ratio");
+//		System.out.println(FuzzySearch.weightedRatio(s1,s2));
+//		
+//		System.out.println("\n\n\n");
 		
 		// extract methods yet to be evaluated - given in the link, placed at the beginning of this method.
 		

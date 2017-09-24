@@ -8764,3 +8764,1435 @@ NO RESULTS FROM NER
 NER Parsing Output
 line ------>   Please Bid tdy-open
 NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   OFFER US912834EV64 15mm
+nerToken -> type {Verb} value {OFFER}
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   EUR US912834EV64 15mm
+nerToken -> type {CURRENCY} value {EUR}
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   T1M US912834EV64 15mm
+nerToken -> type {ISIN} value {T1M}
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   NEEDS SPOT OPEN
+nerToken -> type {Verb} value {NEEDS}
+nerToken -> type {Desc} value {SPOTOPEN}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   NEEDS SPOT OPEN for the following
+nerToken -> type {Verb} value {NEEDS}
+nerToken -> type {Desc} value {SPOTOPEN}
+nerToken -> type {StartDate} value {for}
+nerToken -> type {EndDate} value {the}
+nerToken -> type {QUANTITY} value {following}
+
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please may I have EUR
+nerToken -> type {VERB} value {have}
+nerToken -> type {CURRENCY} value {EUR}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please may I have EUR
+nerToken -> type {VERB} value {have}
+nerToken -> type {CURRENCY} value {EUR}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 BID 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {VERB} value {BID}
+nerToken -> type {QTY} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm"
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+nerToken -> type {STARTDATE} value {"}
+
+
+NER Parsing Output
+line ------>   Please may I have EUR
+nerToken -> type {VERB} value {have}
+nerToken -> type {CURRENCY} value {EUR}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 OFFER 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Verb} value {OFFER}
+nerToken -> type {QTY} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Where can you do the below
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   Bid DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   Offer US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {QTY} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   Bid US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Where can you do the below
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   BID DE0001143378 20mm
+nerToken -> type {VERB} value {BID}
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   OFFER US912834EV64 15mm
+nerToken -> type {Verb} value {OFFER}
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   BID US92922F2Q02 40mm
+nerToken -> type {VERB} value {BID}
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please may I have EUR
+nerToken -> type {VERB} value {have}
+nerToken -> type {CURRENCY} value {EUR}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also Bid
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please may I have EUR
+nerToken -> type {VERB} value {have}
+nerToken -> type {CURRENCY} value {EUR}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also Offer
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Good morning, please may I have your bids for the below:
+nerToken -> type {VERB} value {have}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   OFFER US92922F2Q02 40mm
+nerToken -> type {Verb} value {OFFER}
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Good morning, please may I have your bids for the below:
+nerToken -> type {VERB} value {have}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also Offer
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Good morning, please may I have your bids for the below:
+nerToken -> type {VERB} value {have}
+
+
+NER Parsing Output
+line ------>   BID DE0001143378 20mm
+nerToken -> type {VERB} value {BID}
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   BID US912834EV64 15mm
+nerToken -> type {VERB} value {BID}
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   BID US92922F2Q02 40mm
+nerToken -> type {VERB} value {BID}
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   NEEDS
+nerToken -> type {Verb} value {NEEDS}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   NEED
+nerToken -> type {VERB} value {NEED}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Looking for
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Where can I borrow
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Looking to lend
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please Bid
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please Offer
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please Bid
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please Offer
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   SHORT
+nerToken -> type {VERB} value {SHORT}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   LONG
+nerToken -> type {VERB} value {LONG}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and also
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please Bid EUR
+nerToken -> type {CURRENCY} value {EUR}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and Offer
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please Bid EUR
+nerToken -> type {CURRENCY} value {EUR}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm USD
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+nerToken -> type {Verb} value {USD}
+
+
+NER Parsing Output
+line ------>   and Offer
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please Bid
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm EUR
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+nerToken -> type {CURRENCY} value {EUR}
+
+
+NER Parsing Output
+line ------>   and Offer
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please Bid
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and Offer EUR
+nerToken -> type {CURRENCY} value {EUR}
+
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please Bid EUR
+nerToken -> type {CURRENCY} value {EUR}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and Offer USD
+nerToken -> type {Verb} value {USD}
+
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please Bid €
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and Offer
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please Bid €
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm USD
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+nerToken -> type {Verb} value {USD}
+
+
+NER Parsing Output
+line ------>   and Offer
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please Bid
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm €
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and Offer
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please Bid
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and Offer €
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please Bid €
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and Offer $
+nerToken -> type {OTHER} value {$}
+
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   EUR Please Bid
+nerToken -> type {CURRENCY} value {EUR}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and Offer
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   EUR Please Bid
+nerToken -> type {CURRENCY} value {EUR}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 $ 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {OTHER} value {$}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and Offer
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please Bid
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   € US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and Offer
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please Bid
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   € and Offer
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please EUR Bid
+nerToken -> type {CURRENCY} value {EUR}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and $ Offer
+nerToken -> type {OTHER} value {$}
+
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please Bid EUR
+nerToken -> type {CURRENCY} value {EUR}
+
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and Offer
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please Bid €
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   DE0001143378 20mm
+nerToken -> type {ISIN} value {DE0001143378}
+nerToken -> type {Qty} value {20mm}
+
+
+NER Parsing Output
+line ------>   US912834EV64 15mm
+nerToken -> type {ISIN} value {US912834EV64}
+nerToken -> type {Qty} value {15mm}
+
+
+NER Parsing Output
+line ------>   and Offer
+NO RESULTS FROM NER
+
+NER Parsing Output
+line ------>   US92922F2Q02 40mm
+nerToken -> type {ISIN} value {US92922F2Q02}
+nerToken -> type {Qty} value {40mm}
+
+
+NER Parsing Output
+line ------>   Please may I have your bids 29 Jun 09 Oct 2017
+nerToken -> type {VERB} value {have}
+
+
+NER Parsing Output
+line ------>   BUND CPN 07/23 DE0001143261 10m
+nerToken -> type {VERB} value {BUND}
+nerToken -> type {QTY} value {CPN07/23}
+nerToken -> type {ISIN} value {DE0001143261}
+nerToken -> type {QUANTITY} value {10m}
+
+
+NER Parsing Output
+line ------>   UK WAR LOAN 3 ½ 29/12/4 GB0009386284 5,000,000
+nerToken -> type {Verb} value {UK}
+nerToken -> type {Desc} value {WARLOAN}
+nerToken -> type {StartDate} value {3}
+nerToken -> type {EndDate} value {½}
+nerToken -> type {ISIN} value {29/12/4}
+nerToken -> type {ISIN} value {GB0009386284}
+nerToken -> type {DATE} value {5,000,000}
+
+
+NER Parsing Output
+line ------>   Please may I have your bids 29 Jun 09 Oct
+nerToken -> type {VERB} value {have}
+
+
+NER Parsing Output
+line ------>   BUND CPN 07/23 DE0001143261 10m
+nerToken -> type {VERB} value {BUND}
+nerToken -> type {QTY} value {CPN07/23}
+nerToken -> type {ISIN} value {DE0001143261}
+nerToken -> type {QUANTITY} value {10m}
+
+
+NER Parsing Output
+line ------>   UK WAR LOAN 3 ½ 29/12/4 GB0009386284 5,000,000
+nerToken -> type {Verb} value {UK}
+nerToken -> type {Desc} value {WARLOAN}
+nerToken -> type {StartDate} value {3}
+nerToken -> type {EndDate} value {½}
+nerToken -> type {ISIN} value {29/12/4}
+nerToken -> type {ISIN} value {GB0009386284}
+nerToken -> type {DATE} value {5,000,000}
+
+
+NER Parsing Output
+line ------>   Please may I have your bids 29Jun 09Oct 2017
+nerToken -> type {VERB} value {have}
+
+
+NER Parsing Output
+line ------>   BUND CPN 07/23 DE0001143261 10m
+nerToken -> type {VERB} value {BUND}
+nerToken -> type {QTY} value {CPN07/23}
+nerToken -> type {ISIN} value {DE0001143261}
+nerToken -> type {QUANTITY} value {10m}
+
+
+NER Parsing Output
+line ------>   UK WAR LOAN 3 ½ 29/12/4 GB0009386284 5,000,000
+nerToken -> type {Verb} value {UK}
+nerToken -> type {Desc} value {WARLOAN}
+nerToken -> type {StartDate} value {3}
+nerToken -> type {EndDate} value {½}
+nerToken -> type {ISIN} value {29/12/4}
+nerToken -> type {ISIN} value {GB0009386284}
+nerToken -> type {DATE} value {5,000,000}
+
+
+NER Parsing Output
+line ------>   Please may I have your bids 29Jun 09Oct
+nerToken -> type {VERB} value {have}
+
+
+NER Parsing Output
+line ------>   BUND CPN 07/23 DE0001143261 10m
+nerToken -> type {VERB} value {BUND}
+nerToken -> type {QTY} value {CPN07/23}
+nerToken -> type {ISIN} value {DE0001143261}
+nerToken -> type {QUANTITY} value {10m}
+
+
+NER Parsing Output
+line ------>   UK WAR LOAN 3 ½ 29/12/4 GB0009386284 5,000,000
+nerToken -> type {Verb} value {UK}
+nerToken -> type {Desc} value {WARLOAN}
+nerToken -> type {StartDate} value {3}
+nerToken -> type {EndDate} value {½}
+nerToken -> type {ISIN} value {29/12/4}
+nerToken -> type {ISIN} value {GB0009386284}
+nerToken -> type {DATE} value {5,000,000}
+
+
+NER Parsing Output
+line ------>   Please may I have your bids 29-Jun 09-Oct 2017
+nerToken -> type {VERB} value {have}
+
+
+NER Parsing Output
+line ------>   BUND CPN 07/23 DE0001143261 10m
+nerToken -> type {VERB} value {BUND}
+nerToken -> type {QTY} value {CPN07/23}
+nerToken -> type {ISIN} value {DE0001143261}
+nerToken -> type {QUANTITY} value {10m}
+
+
+NER Parsing Output
+line ------>   UK WAR LOAN 3 ½ 29/12/4 GB0009386284 5,000,000
+nerToken -> type {Verb} value {UK}
+nerToken -> type {Desc} value {WARLOAN}
+nerToken -> type {StartDate} value {3}
+nerToken -> type {EndDate} value {½}
+nerToken -> type {ISIN} value {29/12/4}
+nerToken -> type {ISIN} value {GB0009386284}
+nerToken -> type {DATE} value {5,000,000}
+
+
+NER Parsing Output
+line ------>   Please may I have your bids 29-Jun 09-Oct
+nerToken -> type {VERB} value {have}
+
+
+NER Parsing Output
+line ------>   PARGN 7X B1B	EUR XS0193406609 10mm
+nerToken -> type {VERB} value {PARGN}
+nerToken -> type {QTY} value {7X}
+nerToken -> type {ISIN} value {B1B}
+nerToken -> type {Verb} value {EUR}
+nerToken -> type {ISIN} value {XS0193406609}
+nerToken -> type {QUANTITY} value {10mm}
+
+
+NER Parsing Output
+line ------>   PARGN 7X B1B	EUR XS0193406609 10mm
+nerToken -> type {VERB} value {PARGN}
+nerToken -> type {QTY} value {7X}
+nerToken -> type {ISIN} value {B1B}
+nerToken -> type {Verb} value {EUR}
+nerToken -> type {ISIN} value {XS0193406609}
+nerToken -> type {QUANTITY} value {10mm}

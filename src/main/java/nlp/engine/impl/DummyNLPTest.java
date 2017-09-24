@@ -14,6 +14,10 @@ public class DummyNLPTest {
 	public static void main(String[] args) throws IOException {
 		NLPEngine nlpEngine = NLPBootstrap.getNLPEngine();
 		
+		
+		// desc isin qty
+		// XS0193406609	PARGN 7X B1B	EUR
+		nlpEngine.process("PARGN 7X B1B	EUR XS0193406609 10mm");
 //		nlpEngine.process("DE0001143378 BUND CPN JUL34 A 8.8mil T1W EUR BID ");
 //		nlpEngine.process("DE0001143378 8.8mil EUR BID ");
 //		nlpEngine.process("DE0001143378 EUR BID ");
@@ -22,28 +26,28 @@ public class DummyNLPTest {
 //		nlpEngine.process("DE0001143378 8.8mil EUR");
 		
 		
-		File messages = new File("Messages_truncated.txt");
-		
-		BufferedReader b;
-		try {
-			String readLine = "";
-			b = new BufferedReader(new FileReader(messages));
-			
-			while ((readLine = b.readLine()) != null) {
-				System.out.println("ReadLine -- > "+readLine);
-				if(readLine.length() > 0 && !readLine.startsWith("#")) {
-					Arrays.stream(readLine.split("\\n")).forEach(ln -> {
-						System.out.println("line passed -- > "+ln);
-						nlpEngine.process(ln);
-					});
-				}
-				System.out.println();
-				System.out.println();
-			}
-		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+//		File messages = new File("Messages_truncated.txt");
+//		
+//		BufferedReader b;
+//		try {
+//			String readLine = "";
+//			b = new BufferedReader(new FileReader(messages));
+//			
+//			while ((readLine = b.readLine()) != null) {
+//				System.out.println("ReadLine -- > "+readLine);
+//				if(readLine.length() > 0 && !readLine.startsWith("#")) {
+//					Arrays.stream(readLine.split("\\n")).forEach(ln -> {
+//						System.out.println("line passed -- > "+ln);
+//						nlpEngine.process(ln);
+//					});
+//				}
+//				System.out.println();
+//				System.out.println();
+//			}
+//		} catch (FileNotFoundException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}
 
 
 
