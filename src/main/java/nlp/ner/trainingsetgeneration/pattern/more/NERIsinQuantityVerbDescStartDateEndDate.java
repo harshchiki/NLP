@@ -44,18 +44,26 @@ public class NERIsinQuantityVerbDescStartDateEndDate implements IPattern{
 										new String[] {
 												NERType.ISIN.toString(), instrument.getIsin(),
 												NERType.Qty.toString(), qty.getDescription(),
-												NERType.Verb.toString(), verb.toString(),
-												NERType.Desc.toString(), instrument.getDescription(),
-												NERType.StartDate.toString(), startDate.getDescription(),
-												NERType.EndDate.toString(), endDate.getDescription()
+												NERType.Verb.toString(), verb.toString()
+//												NERType.Desc.toString(), instrument.getDescription(),
 										}));
+								
+								builder.append(getRandomDescription(nerLibrary));
+								
+								builder.append(getNERPattern(nerLibrary,
+										new String[] {
+										NERType.StartDate.toString(), startDate.getDescription(),
+										NERType.EndDate.toString(), endDate.getDescription()
+								}));
+								
 								break;
 							case STANFORD_CORE_NLP:
 								
 								builder.append(getNERPattern(nerLibrary,
 										new String[] {
 												instrument.getIsin(), NERType.ISIN.toString(),
-												qty.getDescription(), NERType.Qty.toString(),
+//												qty.getDescription(), NERType.Qty.toString(),
+												getRandomDescription(nerLibrary), NERType.Qty.toString(),
 												verb.toString(), NERType.Verb.toString(),
 												instrument.getDescription(), NERType.Desc.toString(),
 												startDate.getDescription(), NERType.StartDate.toString(),

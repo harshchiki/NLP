@@ -33,10 +33,11 @@ public class NERPatternPleaseVerbQtyDesc implements IPattern {
 			Arrays.stream(Verbs.values()).forEach(verb -> {
 				Arrays.stream(Quantities.values()).forEach(quantity -> {
 					final StringBuilder builder = new StringBuilder();
-					builder.append(String.format("Please\n <START:VERB> %s <END> <START:QTY> %s <END> <START:DESC> %s <END> ",
+					builder.append(String.format("Please\n <START:VERB> %s <END> <START:QTY> %s <END> %s ",
 							verb,
 							quantity.getDescription(),
-							instrument.getDescription()
+//							instrument.getDescription()
+							getRandomDescription(NERLibrary.APACHE_OPEN_NLP)
 							));
 					addToListIfNotEmpty(builder, this.trainingSetElements);
 				});

@@ -7,7 +7,7 @@ import java.util.Map;
 import nlp.ner.trainingsetgeneration.pattern.IPattern;
 import nlp.ner.trainingsetgeneration.pattern.NERPatternCurrPleaseVerb;
 import nlp.ner.trainingsetgeneration.pattern.NERPatternCurrRateDescIsinDate;
-import nlp.ner.trainingsetgeneration.pattern.NERPatternDescIsinCurr;
+import nlp.ner.trainingsetgeneration.pattern.NERPatternCurrencyPleaseVerb;
 import nlp.ner.trainingsetgeneration.pattern.NERPatternLookingForIsinDescQtyStartDate;
 import nlp.ner.trainingsetgeneration.pattern.NERPatternOtherRateVerbBaseInfoDateStop;
 import nlp.ner.trainingsetgeneration.pattern.NERPatternPleaseMayIHaveVerbCurr;
@@ -43,8 +43,6 @@ public class NERTrainingPatterns {
 		
 		patterns.add(new NERPatternCurrRateDescIsinDate(trainingSetElements, instruments));
 		
-		patterns.add(new NERPatternDescIsinCurr(trainingSetElements, instruments));
-		
 		patterns.add(new NERPatternLookingForIsinDescQtyStartDate(trainingSetElements, instruments));
 		
 		patterns.add(new NERPatternOtherRateVerbBaseInfoDateStop(trainingSetElements, instruments));
@@ -55,7 +53,7 @@ public class NERTrainingPatterns {
 		
 		// new patterns - singular
 		
-		patterns.add(new NERDescIsinQty(trainingSetElements, instruments));
+//		patterns.add(new NERDescIsinQty(trainingSetElements, instruments));
 		
 		return patterns;
 	}

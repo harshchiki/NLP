@@ -36,9 +36,12 @@ public class NERDescIsinQty implements IPattern{
 				switch(nerLibrary) {
 				case APACHE_OPEN_NLP:
 					
+					builder.append(getRandomDescription(nerLibrary));
+					
 					builder.append(getNERPattern(nerLibrary,
 							new String[] {
-									NERType.Desc.toString(), instrument.getDescription(),
+//									NERType.Desc.toString(), instrument.getDescription(),
+//									NERType.Desc.toString(), getRandomDescription(nerLibrary),
 									NERType.ISIN.toString(), instrument.getIsin(),
 									NERType.Qty.toString(), qty.getDescription()
 							}));
@@ -47,7 +50,8 @@ public class NERDescIsinQty implements IPattern{
 					
 					builder.append(getNERPattern(nerLibrary,
 							new String[] {
-									instrument.getDescription(), NERType.Desc.toString(),
+//									instrument.getDescription(), NERType.Desc.toString(),
+									getRandomDescription(nerLibrary), NERType.Desc.toString(),
 									instrument.getIsin(), NERType.ISIN.toString(),
 									qty.getDescription(), NERType.Desc.toString()
 							}));

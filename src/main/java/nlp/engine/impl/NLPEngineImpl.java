@@ -35,7 +35,7 @@ public class NLPEngineImpl implements NLPEngine {
 		TextProcessingContext textProcessingContext = new TextProcessingContextImpl(lineToProcess);
 		
 		this.secCodeProcessor.process(textProcessingContext);
-		this.secDescriptionProcessor.process(textProcessingContext);
+//		this.secDescriptionProcessor.process(textProcessingContext);
 		this.nerProcessor.process(textProcessingContext);
 		
 		
@@ -77,17 +77,19 @@ public class NLPEngineImpl implements NLPEngine {
 	private void replaceTokensInNERResults(TextProcessingContext context){		
 		context.getNERResults().forEach(nerResult -> {
 			String nerResValue = nerResult.getValue().get().toString();
-			if(nerResValue.startsWith("secCode")){
+			if(nerResValue.startsWith("secCode")
+					&& context.getSecurityCodeTokens() != null
+					&& context.getSecurityCodeTokens().containsKey(nerResValue)){
 				String replacementText = context.getSecurityCodeTokens().get(nerResValue).getCode();
 				Optional<?> op = Optional.of(replacementText);
 				nerResult.setValue(op);
 			}
 			
-			if(nerResValue.startsWith("secDesc")){
-				String replacementText = context.getSecurityDescTokens().get(nerResValue);
-				Optional<?> op = Optional.of(replacementText);
-				nerResult.setValue(op);
-			}
+//			if(nerResValue.startsWith("secDesc")){
+//				String replacementText = context.getSecurityDescTokens().get(nerResValue);
+//				Optional<?> op = Optional.of(replacementText);
+//				nerResult.setValue(op);
+//			}
 		});
 	}
 	

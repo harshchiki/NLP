@@ -68,8 +68,46 @@ public interface IPattern {
 			builder.append("\n");
 			break;
 		}
-		
-		
 		return builder.toString();
+	}
+	
+	default String getRandomDescription(NERLibrary library){
+		final String[] apacheDescriptions = new String[]{
+				"<START:DESC_PART> BUND <END> <START:DESC_PART> CPN <END> <START:DESC_PART> 07/23 <END>",
+
+				"<START:DESC_PART> UKTI <END> <START:DESC_PART> 1 <END> <START:DESC_PART> 1/4 <END> <START:DESC_PART> 11/27 <END> ",
+
+				"<START:DESC_PART> UK <END> <START:DESC_PART> WAR <END> <START:DESC_PART> LOAN <END> <START:DESC_PART> 3 <END> <START:DESC_PART> ½ <END> <START:DESC_PART> 29/12/4 <END>",
+
+				"<START:DESC_PART> BUND <END> <START:DESC_PART> CPN <END> <START:DESC_PART> JUL23 <END>",
+
+				"<START:DESC_PART> UKTI <END> <START:DESC_PART> 1 <END> <START:DESC_PART> 1/4 <END> <START:DESC_PART> 11/27<END>",
+
+				"<START:DESC_PART> BNG <END> <START:DESC_PART> 5.375 <END> <START:DESC_PART> 06/21 <END>",
+
+				"<START:DESC_PART> RESF <END> <START:DESC_PART> 5.25 <END> <START:DESC_PART> 12/28 <END>",
+
+				"<START:DESC_PART> UKTI <END> <START:DESC_PART> 1 <END> <START:DESC_PART> 1/4 <END> <START:DESC_PART> 11/22/2027 <END>",
+				
+				"<START:DESC_PART> T <END> <START:DESC_PART> 6.0 <END> <START:DESC_PART> 02/15/26 <END>",
+
+				"<START:DESC_PART> T <END> <START:DESC_PART> 3.875 <END> <START:DESC_PART> 08/15/40 <END> <START:DESC_PART> 1wk <END>",
+
+				"<START:DESC_PART> DBR <END> <START:DESC_PART> 4.75 <END> <START:DESC_PART> 07/40 <END>"
+		};
+		
+		final String[] stanfordDescriptions = new String[]{
+				
+		};
+		
+		switch(library){
+		case APACHE_OPEN_NLP:
+			return apacheDescriptions[((int) Math.random())%(apacheDescriptions.length)];
+		case STANFORD_CORE_NLP:
+			return stanfordDescriptions[((int) Math.random())%(stanfordDescriptions.length)];
+		}
+		
+		return "";
+		
 	}
 }

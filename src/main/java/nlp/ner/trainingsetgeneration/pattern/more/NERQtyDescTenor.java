@@ -34,16 +34,23 @@ public class NERQtyDescTenor implements IPattern{
 						
 						builder.append(getNERPattern(nerLibrary,
 								new String[] {
-										NERType.Qty.toString(), qty.getDescription(),
-										NERType.Desc.toString(), instrument.getDescription(),
-										NERType.Tenor.toString(), tenor.toString()	
+//										NERType.Qty.toString(), qty.getDescription(),
+										NERType.Qty.toString(), qty.getDescription()
+//										NERType.Desc.toString(), instrument.getDescription(),
+//										NERType.Tenor.toString(), tenor.toString()	
 								}));
+						builder.append(getRandomDescription(nerLibrary));
+						builder.append(getNERPattern(nerLibrary,
+								new String[]{
+								NERType.Tenor.toString(), tenor.toString()
+						}));
 						break;
 					case STANFORD_CORE_NLP:
 						
 						builder.append(getNERPattern(nerLibrary,
 								new String[]{
-										qty.getDescription(), NERType.Qty.toString(),
+//										qty.getDescription(), NERType.Qty.toString(),
+										getRandomDescription(nerLibrary), NERType.Qty.toString(),
 										instrument.getDescription(), NERType.Desc.toString(),
 										tenor.toString(), NERType.Tenor.toString()
 								}));

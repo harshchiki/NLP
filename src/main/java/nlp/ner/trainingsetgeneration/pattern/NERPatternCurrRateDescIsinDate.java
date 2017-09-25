@@ -8,6 +8,7 @@ import nlp.ner.trainingsetgeneration.Instrument;
 import nlp.ner.trainingsetgeneration.NERLibrary;
 import nlp.ner.trainingsetgeneration.enums.Currencies;
 import nlp.ner.trainingsetgeneration.enums.Dates;
+import nlp.ner.trainingsetgeneration.enums.NERType;
 import nlp.ner.trainingsetgeneration.enums.Rates;
 
 /**
@@ -36,13 +37,23 @@ public class NERPatternCurrRateDescIsinDate implements IPattern {
 					Arrays.stream(Dates.values()).forEach(dateStart ->{
 							final StringBuilder builder = new StringBuilder();
 							
-							builder.append(String.format("<START:CURRENCY> %s <END> <START:RATE> %s <END> <START:DESC> %s <END> <START:ISIN> %s <END> <START:DATE> %s <END>",
+							builder.append(String.format("<START:CURRENCY> %s <END> <START:RATE> %s <END> ",
 									currency,
-									rate.getDescription(),
-									instrument.getDescription(),
-									instrument.getIsin(),
-									dateStart.getDescription()
+									rate.getDescription()									
+//									instrument.getDescription(),
+//									getRandomDescription(NERLibrary.APACHE_OPEN_NLP),
+//									instrument.getIsin(),
+//									dateStart.getDescription()
 									));
+							
+							builder.append(getRandomDescription(nerLibrary));
+							
+
+							builder.append(String.format("<START:%s> %s <END> <START:%s> %s <END>",
+									NERType.ISIN,
+									instrument.getIsin(),
+									NERType.StartDate,
+									dateStart.getDescription()));
 							
 							addToListIfNotEmpty(builder, this.trainingSetElements);
 							
