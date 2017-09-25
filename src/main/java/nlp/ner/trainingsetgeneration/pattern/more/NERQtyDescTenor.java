@@ -35,11 +35,14 @@ public class NERQtyDescTenor implements IPattern{
 						builder.append(getNERPattern(nerLibrary,
 								new String[] {
 //										NERType.Qty.toString(), qty.getDescription(),
-										NERType.Qty.toString(), qty.getDescription()
+										NERType.Qty.toString(), getSecurityDescriptionToken(),//qty.getDescription()
 //										NERType.Desc.toString(), instrument.getDescription(),
 //										NERType.Tenor.toString(), tenor.toString()	
 								}));
-						builder.append(getRandomDescription(nerLibrary));
+						builder.append(
+//								getRandomDescription(nerLibrary)
+								" <START:Desc> secDesc_"+getRandom10()+" <END> "
+								);
 						builder.append(getNERPattern(nerLibrary,
 								new String[]{
 								NERType.Tenor.toString(), tenor.toString()

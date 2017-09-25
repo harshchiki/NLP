@@ -32,10 +32,10 @@ public class NERPatternLookingForIsinDescQtyStartDate implements IPattern {
 				getFirstKInstrumentsAfterShuffling(instruments.values(),5).forEach(instrument -> {
 					final StringBuilder builder = new StringBuilder();
 					
-					builder.append(String.format("<START:OTHER> ***Looking for <END> <START:ISIN> %s <END> %s <START:QUANTITY> %s <END> <START:STARTDATE> %s <END> ",
+					builder.append(String.format("<START:OTHER> ***Looking for <END> <START:ISIN> %s <END> <START:Desc> secDesc_"+ getRandom10() +" <END> <START:QUANTITY> %s <END> <START:STARTDATE> %s <END> ",
 							instrument.getIsin(),
 //							qty.getDescription(),
-							getRandomDescription(NERLibrary.APACHE_OPEN_NLP),
+//							getRandomDescription(NERLibrary.APACHE_OPEN_NLP),
 							qty.getDescription(),
 							date.getDescription()
 							));

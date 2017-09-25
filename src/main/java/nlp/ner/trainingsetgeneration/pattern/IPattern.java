@@ -110,4 +110,8 @@ public interface IPattern {
 		return "";
 		
 	}
+	
+	default String getSecurityDescriptionToken() {
+		return "secDesc_"+getRandom10();
+	}
 }

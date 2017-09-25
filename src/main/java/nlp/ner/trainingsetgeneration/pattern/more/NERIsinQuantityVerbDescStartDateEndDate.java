@@ -48,7 +48,10 @@ public class NERIsinQuantityVerbDescStartDateEndDate implements IPattern{
 //												NERType.Desc.toString(), instrument.getDescription(),
 										}));
 								
-								builder.append(getRandomDescription(nerLibrary));
+								builder.append(
+//										getRandomDescription(nerLibrary)
+										" <START:"+NERType.Desc+"> "+getSecurityDescriptionToken()+" <END> "
+										);
 								
 								builder.append(getNERPattern(nerLibrary,
 										new String[] {

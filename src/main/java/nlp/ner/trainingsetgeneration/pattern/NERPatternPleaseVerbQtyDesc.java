@@ -6,6 +6,7 @@ import java.util.Map;
 
 import nlp.ner.trainingsetgeneration.Instrument;
 import nlp.ner.trainingsetgeneration.NERLibrary;
+import nlp.ner.trainingsetgeneration.enums.NERType;
 import nlp.ner.trainingsetgeneration.enums.Quantities;
 import nlp.ner.trainingsetgeneration.enums.Verbs;
 
@@ -37,7 +38,8 @@ public class NERPatternPleaseVerbQtyDesc implements IPattern {
 							verb,
 							quantity.getDescription(),
 //							instrument.getDescription()
-							getRandomDescription(NERLibrary.APACHE_OPEN_NLP)
+//							getRandomDescription(NERLibrary.APACHE_OPEN_NLP)
+							"<START:"+NERType.Desc+"> "+getSecurityDescriptionToken()+" <END>"
 							));
 					addToListIfNotEmpty(builder, this.trainingSetElements);
 				});

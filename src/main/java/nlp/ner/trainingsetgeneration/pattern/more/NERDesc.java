@@ -41,7 +41,9 @@ public class NERDesc implements IPattern{
 						
 						builder.append(getNERPattern(NERLibrary.APACHE_OPEN_NLP,
 								new String[] {
-										NERType.Desc.toString(), getRandomDescription(nerLibrary)
+										NERType.Desc.toString(), 
+//										getRandomDescription(nerLibrary)
+										"secDesc_"+getRandom10()
 								}));
 						break;
 					case STANFORD_CORE_NLP:

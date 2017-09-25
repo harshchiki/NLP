@@ -19,6 +19,7 @@ import nlp.ner.trainingsetgeneration.pattern.IPattern;
 public class NERDescIsinQty implements IPattern{
 	private final List<String> trainingSetElements;
 	private final Map<String, Instrument> instruments;
+	
 
 	public NERDescIsinQty(final List<String> trainingSetElements,
 			final Map<String, Instrument> instruments){
@@ -36,14 +37,17 @@ public class NERDescIsinQty implements IPattern{
 				switch(nerLibrary) {
 				case APACHE_OPEN_NLP:
 					
-					builder.append(getRandomDescription(nerLibrary));
+					builder.append(
+//							getRandomDescription(nerLibrary)
+							"<START:"+NERType.Desc+"> "+getSecurityDescriptionToken()+" <END>"
+							);
 					
 					builder.append(getNERPattern(nerLibrary,
 							new String[] {
 //									NERType.Desc.toString(), instrument.getDescription(),
 //									NERType.Desc.toString(), getRandomDescription(nerLibrary),
 									NERType.ISIN.toString(), instrument.getIsin(),
-									NERType.Qty.toString(), qty.getDescription()
+									NERType.Qty.toString(), getSecurityDescriptionToken()//qty.getDescription()
 							}));
 					break;
 				case STANFORD_CORE_NLP:

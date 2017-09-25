@@ -46,7 +46,10 @@ public class NERPatternCurrRateDescIsinDate implements IPattern {
 //									dateStart.getDescription()
 									));
 							
-							builder.append(getRandomDescription(nerLibrary));
+							builder.append(
+//									getRandomDescription(nerLibrary)
+									"<START:"+NERType.Desc+"> "+getSecurityDescriptionToken()+" <END> "
+									);
 							
 
 							builder.append(String.format("<START:%s> %s <END> <START:%s> %s <END>",

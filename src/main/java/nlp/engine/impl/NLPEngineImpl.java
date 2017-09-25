@@ -35,7 +35,7 @@ public class NLPEngineImpl implements NLPEngine {
 		TextProcessingContext textProcessingContext = new TextProcessingContextImpl(lineToProcess);
 		
 		this.secCodeProcessor.process(textProcessingContext);
-//		this.secDescriptionProcessor.process(textProcessingContext);
+		this.secDescriptionProcessor.process(textProcessingContext);
 		this.nerProcessor.process(textProcessingContext);
 		
 		
@@ -85,11 +85,11 @@ public class NLPEngineImpl implements NLPEngine {
 				nerResult.setValue(op);
 			}
 			
-//			if(nerResValue.startsWith("secDesc")){
-//				String replacementText = context.getSecurityDescTokens().get(nerResValue);
-//				Optional<?> op = Optional.of(replacementText);
-//				nerResult.setValue(op);
-//			}
+			if(nerResValue.startsWith("secDesc")){
+				String replacementText = context.getSecurityDescTokens().get(nerResValue);
+				Optional<?> op = Optional.of(replacementText);
+				nerResult.setValue(op);
+			}
 		});
 	}
 	
