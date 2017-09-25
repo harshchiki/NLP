@@ -1,6 +1,7 @@
 package nlp.engine.parsers.impl;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -17,30 +18,30 @@ public class SecurityDescriptionParserImpl implements SecurityDescriptionParser 
 
 
 	private final Collection<String> descriptions;
+	private final int FUZZYSEARCH_PARTIAL_RATIO_THRESHOLD = 80;
 
 	public SecurityDescriptionParserImpl(Collection<String> descriptions) {
 		this.descriptions = descriptions;
 	}
 
+	/**
+	 * Approach
+	 * 1.) Populate Map of Description to Best Closeness (encapsulates the bounds)
+	 * 
+	 * 2.) 
+	 */
 	@Override
 	public Iterable<String> getSecurityDescription(String line) {
-
-		// for each description that close matches the line, we have a 
-		// map of desc to list of closeness, which encapsulates the boundaries of text in 'line'.
-		Map<String, Closeness> mapDescCloseness = new HashMap<>(); 
+		final Map<String, Closeness> mapDescCloseness = new HashMap<>(); 
 
 		descriptions.forEach(desc -> {
-			String preProcessedDescription = preProcessDescription(desc);
-			LCSResult lcsResult = getLengthOfLongestCommonSubsequence(line, preProcessedDescription);
-			// considering if there is a 70% match
+			final String preProcessedDescription = preProcessDescription(desc);
+			final LCSResult lcsResult = getLengthOfLongestCommonSubsequence(line, preProcessedDescription);
+
 			if(lcsResult.length > 0 
-					//					&& getMatchPercentage(lcsResult.length, preProcessedDescription.length()) > 95.0
 					&& areSpacesThereOnEitherSides(line, lcsResult)
-					//					&& matchPercentageByEditDistance(line, lcsResult.startIndex, lcsResult.endIndex, desc)
-
-					){
-
-				Closeness closeness = new Closeness(lcsResult.startIndex, 
+					&& FuzzySearch.partialRatio(line.substring(lcsResult.startIndex, lcsResult.endIndex), desc) > FUZZYSEARCH_PARTIAL_RATIO_THRESHOLD){
+				final Closeness closeness = new Closeness(lcsResult.startIndex, 
 						lcsResult.endIndex, 
 						preProcessedDescription.length(), 
 						lcsResult.length,
@@ -52,56 +53,15 @@ public class SecurityDescriptionParserImpl implements SecurityDescriptionParser 
 
 		// map is ready with the closeness with each description (that qualifies by lcs length)
 
-		List<Closeness> lstDesc = new ArrayList<>(mapDescCloseness.values());
-		Collections.sort(lstDesc);
-		// the desc with the lowest levenshtein distance is closest to the one in 'line', and so should be returned.
-		List<String> securityDescription = new LinkedList<>(); // TODO: ideally this should be just a string, not a collection.
-		Closeness bestDesc = lstDesc.get(lstDesc.size() - 1);
-		securityDescription.add(line.substring(bestDesc.startIndex, bestDesc.endIndex));
-		return securityDescription;
-	}
-
-	private List<Integer> getLCSBounds(int[][] L, int m, int n, String X, String Y){
-		List<Integer> lst = new ArrayList<>(2);
-
-		// Following code is used to print LCS
-		int index = L[m][n];
-		int temp = index;
-
-		// Create a character array to store the lcs string
-		char[] lcs = new char[index+1];
-		lcs[index] = '\0'; // Set the terminating character
-
-		// Start from the right-most-bottom-most corner and
-		// one by one store characters in lcs[]
-		int i = m, j = n;
-		while (i > 0 && j > 0)
-		{
-			// If current character in X[] and Y are same, then
-			// current character is part of LCS
-			if (X.charAt(i-1) == Y.charAt(j-1))
-			{
-				// Put current character in result
-				lcs[index-1] = X.charAt(i-1); 
-
-				// reduce values of i, j and index
-				i--; 
-				j--; 
-				index--;     
-			}
-
-			// If not same, then find the larger of two and
-			// go in the direction of larger value
-			else if (L[i-1][j] > L[i][j-1])
-				i--;
-			else
-				j--;
+		if(mapDescCloseness.isEmpty()){
+			return Collections.EMPTY_LIST;
 		}
-
-		lst.add(Integer.valueOf(lcs[0]));
-		lst.add(Integer.valueOf(lcs[temp]));
-
-		return lst;
+		
+		final List<Closeness> lstDesc = new ArrayList<>(mapDescCloseness.values()); 		
+		Collections.sort(lstDesc);
+		Closeness bestDesc = lstDesc.get(lstDesc.size() - 1);
+		
+		return Arrays.asList(line.substring(bestDesc.startIndex, bestDesc.endIndex));
 	}
 
 	private void putInMap(Map<String, Closeness> mapDescCloseness,
@@ -136,67 +96,7 @@ public class SecurityDescriptionParserImpl implements SecurityDescriptionParser 
 		return description;
 	}
 
-	// not to be used. TODO: Remove this method
-	private double getMatchPercentage(int matchStringLength, int descLength){
-		if(descLength == 0) {
-			// handling divide by zero exception
-			return 0.0;
-		}
 
-		double matchPercent = ((double)matchStringLength/(double)descLength)*100;
-		return matchPercent;
-	}
-
-	private boolean matchPercentageByEditDistance(final String line, final int startIndex, final int endIndex, final String desc) {
-		int editDistance = getEditDistance(line, startIndex, endIndex, desc);
-		if(Math.abs(editDistance - desc.length()) < 4){
-			// this value 4 is just a value assumed (assumed a small number).
-			// this could vary
-			return true;
-		}else {
-			return false;
-		}
-	}
-
-	private int getEditDistance(final String line, final int startIndex, final int endIndex, final String desc) {
-		return editDistanceHelper(line.substring(startIndex, endIndex), desc, endIndex-startIndex, desc.length());
-	}
-
-	private int editDistanceHelper(String str1, String str2, int m, int n) {
-		// Create a table to store results of subproblems
-		int editDistanceTable[][] = new int[m+1][n+1];
-
-		// Fill d[][] in bottom up manner
-		for (int i=0; i<=m; i++)
-		{
-			for (int j=0; j<=n; j++)
-			{
-				// If first string is empty, only option is to
-				// insert all characters of second string
-				if (i==0)
-					editDistanceTable[i][j] = j;  // Min. operations = j
-
-				// If second string is empty, only option is to
-				// remove all characters of second string
-				else if (j==0)
-					editDistanceTable[i][j] = i; // Min. operations = i
-
-				// If last characters are same, 
-				// bring forward the left upper diagonal value
-				else if (str1.charAt(i-1) == str2.charAt(j-1))
-					editDistanceTable[i][j] = editDistanceTable[i-1][j-1];
-
-				// If last character are different, consider all
-				// possibilities and find minimum
-				else
-					editDistanceTable[i][j] = 1 + min(editDistanceTable[i][j-1],  // Insert
-							editDistanceTable[i-1][j],  // Remove
-							editDistanceTable[i-1][j-1]); // Replace
-			}
-		}
-
-		return editDistanceTable[m][n];
-	}
 
 	int min(int a, int b) {
 		return a < b ? a : b;
